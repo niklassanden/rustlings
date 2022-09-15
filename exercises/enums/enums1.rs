@@ -1,16 +1,17 @@
 // enums1.rs
 // No hints this time! ;)
 
-// I AM NOT DONE
-
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 enum Message {
-    // TODO: define a few types of messages as used below
+    Quit,
+    Echo,
+    Move,
+    ChangeColor(u32),
 }
 
 fn main() {
     println!("{:?}", Message::Quit);
     println!("{:?}", Message::Echo);
     println!("{:?}", Message::Move);
-    println!("{:?}", Message::ChangeColor);
+    println!("{:?}", Message::ChangeColor(5));
 }
